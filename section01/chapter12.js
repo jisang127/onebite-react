@@ -26,3 +26,20 @@ varC();
 /**
  * 람다 함수
  */
+let varD = () => {
+  return 1;
+};
+
+console.log(varD());
+
+/**
+ * 보다 간단하게?
+ */
+let varE = (value) => value + 1;
+console.log(varE(10));
+
+// 여러줄일 경우
+let varF = (value) => {
+  console.log(value);
+  return value + 1;
+};
