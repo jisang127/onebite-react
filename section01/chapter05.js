@@ -1,13 +1,9 @@
 let inf = Infinity; // 무한대
 let mInf = -Infinity; // 음의 무한대
 
-let nan = NaN;
-console.log(1 * "hello");
-
+// 빽틱 사용 - 템플릿 리터럴 문법
 let myName = "이정환";
 let myLocation = "목동";
-
-// 빽틱 사용 - 템플릿 리터럴 문법
 let introduceText = `${myName}은 ${myLocation}에 거주합니다`;
 console.log(introduceText);
 
@@ -21,11 +17,6 @@ let strToNum2 = parseInt(str2); // 숫자가 앞에 나와있으면 parseInt로 
 console.log(strToNum2);
 
 /////////////////////
-
-let or = true || false;
-let and = true && false;
-let not = !true;
-console.log(or, and, not);
 
 // 비교 연산
 let comp1 = 1 === 2;

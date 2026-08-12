@@ -9,23 +9,12 @@ let var3 = 20;
 let var4 = var1 ?? var2;
 let var5 = var2 ?? var3;
 let var6 = var3 ?? var2;
-console.log(var4);
-console.log(var6);
+console.log(var4); // 10
+console.log(var5); // 10 - 먼저 null이 아닌 애 그냥 출력
+console.log(var6); // 20
 
 let userName = "박상지";
 let userNickName = "Winterlood";
 
 let displayName = userName ?? userNicakName;
 console.log(displayName);
-
-// 2. typeof 연산자
-// 값 타입 문자열로 반환
-
-let t1 = typeof displayName;
-console.log(t1);
-
-// 3. 삼항 연산자 - 조건식 이용
-let var8 = 10;
-
-let res = var8 % 2 === 0 ? "짝수" : "홀수";
-console.log(res);

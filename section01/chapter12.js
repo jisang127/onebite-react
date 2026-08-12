@@ -1,3 +1,7 @@
+// 함수 간략히
+// 쓸만하네! => 너무 좋당
+
+// 1. 변수에도 함수를 담을 수 있어
 function funcA() {
   console.log("funcA");
 }
@@ -7,6 +11,7 @@ console.log(varA);
 
 varA();
 
+// 2. 간략하게도 담을 수 있어
 let varB = function funcB() {
   console.log("funcB");
 };
@@ -14,8 +19,8 @@ let varB = function funcB() {
 varB();
 // funcB(); // 변수에 바로 할당해서 쓰는 거기 때문에 funcB()는 사용 불가
 
-// 위의 특성을 이용하면 굳이 function명을 지을 필요도 없겠네
-// 그냥 함수 표현식 => 얘는 변수에 할당해서 바로 써야하니까 호이스팅 안됨!
+// 3. 위 특성 이용하면 굳이 function명 지을 필요도 없어 => 그냥 함수 표현식으로!
+// => 얘는 변수에 할당해서 바로 쓰니까 호이스팅 안됨!
 // 콜백함수 상황에서 많이 쓰임
 let varC = function () {
   console.log("funcC");
