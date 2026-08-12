@@ -1,3 +1,6 @@
+// 단락평가 = 코드 정리에 너무 도움되는데!
+// && 일 때 => False && ... 이면 앞에가 이미 False라 뒤에까지 검사 안한다
+// || 일 때 => True || ... 이면 앞에가 이미 true라 뒤에까지 검사 안한다
 function returnFalse() {
   console.log("False 함수");
   return false;

@@ -1,6 +1,5 @@
-// 배열 순회
+// 배열 순회 => for of - 배열에만 사용가능
 let arr = [1, 2, 3];
-// for of 반복문 - 배열에만 사용가능
 for (let item of arr) {
   //   console.log(item);
 }
@@ -19,7 +18,6 @@ for (let i = 0; i < keys.length; i++) {
   //   console.log(keys[i]);
 }
 
-/// for of - 배열에만 사용 가능
 for (let key of keys) {
   const value = person[key];
   //   console.log(key, value);

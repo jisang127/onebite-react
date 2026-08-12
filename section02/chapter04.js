@@ -1,5 +1,4 @@
-// 1. Spread 연산자? => ...
-
+// 1. Spread 연산자 => ...
 let arr1 = [1, 2, 3];
 let arr2 = [4, ...arr1, 5, 6];
 console.log(arr2);
@@ -17,7 +16,7 @@ let obj2 = {
   d: 4,
 };
 
-console.log(obj2);
+console.log(obj2); // {a: 1, b: 2, c: 3, d: 4}
 
 /////////////////////////////
 
@@ -37,4 +36,4 @@ function funcB(one, ...rest) {
   console.log(rest);
 }
 
-funcB(...arr1);
+funcB(...arr2); // arr2 = [4, 1, 2, 3, 5, 6];

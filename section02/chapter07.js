@@ -1,14 +1,14 @@
 // 1. push
 let arr1 = [1, 2, 3];
 arr1.push(4);
-const newLength = arr1.push(5, 6, 7);
+const newLength = arr1.push(5, 6, 7); // 추가된 배열 길이 리턴해줌 - 쓸데가 있긴 한가?
 
 console.log(arr1);
 console.log(newLength);
 
 // 2. pop
 let arr2 = [1, 2, 3];
-const poppedItem = arr2.pop();
+const poppedItem = arr2.pop(); // 이건 빠진 값 리턴해줘
 
 // console.log(poppedItem);
 // console.log(arr2);
@@ -27,15 +27,15 @@ console.log(arr4);
 
 /**
  * [ push / pop ] 이 [ shift / unshift ] 보다 빠름
- * 뒤에서 빼는애 > 앞에서 뺀 다음에 뒤에애들까지 순서 조정해야하는 애
+ * 뒤에서 빼는애 > 앞에서 뺀 다음에 뒤에 애들까지 순서 조정해야 하는 애
  * 가능하면 push pop으로 해결봐라!
  */
 
-// 5. slice 배열 특정범위 잘라서 새 배열로 반환
+// 5. slice 배열 특정범위 잘라서 새 배열로 반환 - 기존 arr는 그대로!
 let arr5 = [1, 2, 3, 4, 5];
 let sliced = arr5.slice(2, 5);
-let slicedEasy = arr5.slice(2);
-let slicedOpposite = arr5.slice(-2);
+let slicedEasy = arr5.slice(2); // 뒤에 끝까지 잘라라
+let slicedOpposite = arr5.slice(-2); // 뒤에서부터 잘라라
 console.log(arr5); // 얘는 그대로
 console.log(sliced); // 얘는 잘라서 씀!
 console.log(slicedEasy);
@@ -43,7 +43,6 @@ console.log(slicedOpposite);
 
 // 6. concat
 // 두개 서로 다른 배열 이어 붙여서 새로운 배열 반환
-
 let arr6 = [1, 2];
 let arr7 = [3, 4];
 let concatedArr = arr6.concat(arr7);
