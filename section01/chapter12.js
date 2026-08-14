@@ -7,7 +7,7 @@ function funcA() {
 }
 
 let varA = funcA;
-console.log(varA);
+console.log(varA); // 함수 전체 출력
 
 varA();
 

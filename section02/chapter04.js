@@ -24,7 +24,7 @@ function funcA(p1, p2, p3) {
   console.log(p1, p2, p3);
 }
 
-funcA(...arr1);
+funcA(...arr1); // arr1= 1,2,3 알아서 묵시적으로 들어감
 
 /////////////////////////////
 

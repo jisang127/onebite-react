@@ -1,4 +1,6 @@
 // 배열 순회 메서드
+// -> foreach / includes / indexof / findIndex(콜백조건추가 가능) / find
+
 // 1. foreach
 let arr = [1, 2, 3];
 let doubledArr = [];
@@ -23,6 +25,9 @@ let index = arr.indexOf(2);
 // console.log(index);
 
 /////////////////////////////////////////
+/////////////////////////////////////////
+/////////////////////////////////////////
+/////////////////////////////////////////
 
 // 4. findIndex - 모든 요소를 순회! + 콜백함수 만족하는 요소 찾기
 const findedIndex = arr.findIndex((item) => {
@@ -45,18 +50,19 @@ const findIndex = arr.findIndex((item) => item % 2 !== 0);
 // indexOf가 있는데 findIndex가 필요한 이유?
 // 객체타입에서는 findIndex로 밖에 못 찾아
 // indexOf => 얕은비교(===)
+
 // 객체는 프로퍼티 기준으로는 비교가 되지 않아
 // findIndex 사용 필요!
 
 let objectArr = [{ name: "이정환" }, { name: "홍길동" }];
 console.log(objectArr.indexOf({ name: "이정환" })); // -1 ????
 
-console.log(objectArr.findIndex((item) => item.name === "이정환")); // 이건 찾아짐
+console.log(objectArr.findIndex((item) => item.name === "이정환")); // 0, 이건 찾아짐
 
 /////////////////////////////////////////
 
-// 5. find?
+// 5. find? => 해당 객체 자체를 반환
 let arr5 = [{ name: "이정환" }, { name: "홍길동" }];
 
 const finded = arr5.find((item) => item.name === "이정환");
-console.log(finded);
+console.log(finded); // {name : '이정환'}

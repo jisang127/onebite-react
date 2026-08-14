@@ -13,7 +13,7 @@ let person = {
 };
 
 let name = person.name;
-console.log(name);
+// console.log(name);
 
 // let age = person["age"];
 // console.log(age);
@@ -45,4 +45,4 @@ let arrB = [];
 let arrC = [1, 2, 3, true, null, undefined, () => {}, {}, []];
 console.log(arrC);
 
-console.log(arrC[3]);
+console.log(arrC[6]);
