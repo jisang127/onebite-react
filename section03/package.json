@@ -1,0 +1,14 @@
+{
+  "name": "section03",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "// 기존에는 이게 기본키였는데 type module로 변경하면?": "commonjs",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  }
+}
