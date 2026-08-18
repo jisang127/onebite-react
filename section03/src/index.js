@@ -21,6 +21,11 @@ import { add, sub } from "./math.js";
 // 원래는 multiply인데 mul로 변경해서 가져올 수도 있어
 import mul from "./math.js";
 
-console.log(add(1, 2)); // 3
-console.log(sub(1, 2)); // -1
-console.log(mul(2, 3)); // 6
+// console.log(add(1, 2)); // 3
+// console.log(sub(1, 2)); // -1
+// console.log(mul(2, 3)); // 6
+
+import randomColor from "randomcolor";
+
+const color = randomColor();
+console.log(color);
