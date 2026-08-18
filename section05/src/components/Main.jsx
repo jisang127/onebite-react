@@ -4,19 +4,26 @@
 // 2. 숫자, 문자열, 배열 값만 렌더링 된다 (boolean / 객체 / null / undefined 안됨)
 // 3. 최상위 태그는 반드시 하나여야만 한다 -> <main>
 
+import "./Main.css";
+
 const Main = () => {
-  const number = 9;
-  const obj = { a: 1 };
-  return (
-    // <div></div> => 최상위 태그 하나만 있어야 해 // 여기서는 main
-    <main>
-      <img />
-      <h1>main</h1>
-      <h2>{number % 2 === 0 ? "짝수" : "홀수"}</h2>
-      {/* {obj} */}
-      {obj.a}
-    </main>
-  );
+  const user = { name: "이정환", isLogin: false };
+
+  //   return <>{user.isLogin ? <button>로그아웃</button> : <div>로그인</div>}</>;
+  if (user.isLogin) {
+    return (
+      <div
+        style={{
+          backgroundColor: "red",
+          borderBottom: "5px solid blue",
+        }}
+      >
+        로그아웃
+      </div>
+    );
+  } else {
+    return <div className="logout">로그인</div>;
+  }
 };
 
 export default Main;
