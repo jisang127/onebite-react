@@ -1,31 +1,23 @@
 import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Main from "./components/Main";
-import Button from "./components/Button";
+import { useState } from "react";
 
+import Bulb from "./components/Bulb";
+import Counter from "./components/Counter";
 // html 태그 반환(return)하는 것들 -> 컴포넌트
 // 보통 function명 따서 부름 => 여기서는 App 컴포넌트겠지
 // 컴포넌트로 쓰는 함수 첫글자는 무조건 대문자 -> 리액트는 소문자는 인정안함!
-function App() {
-  const buttonProps = {
-    text: "메일",
-    color: "red",
-    a: 1,
-    b: 2,
-    c: 3,
-  };
 
-  // Root 컴포넌트
-  // 부모 컴포넌트
+function App() {
+  // [ 관리할 값, 해당 값 변화시킬 함수 ]
+  // const [count, setCount] = useState(1);
+  // console.log(count);
+
+  // 컴포넌트 값이 바뀌면 리렌더링으로 return값을 재 반환한다!
   return (
     <>
-      <Button {...buttonProps} />
-      <Button text={"카페"} color={"red"} />
-      <Button text={"블로그"}>
-        <Header />
-        <div>자식 요소</div>
-      </Button>
+      <Bulb />
+      {/* <h1>{light}</h1> */}
+      <Counter />
     </>
   );
 }
