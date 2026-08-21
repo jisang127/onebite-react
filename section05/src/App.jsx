@@ -1,5 +1,6 @@
 import "./App.css";
 import Register from "./components/Register";
+import HookExam from "./components/HookExam";
 
 // html 태그 반환(return)하는 것들 -> 컴포넌트
 // 보통 function명 따서 부름 => 여기서는 App 컴포넌트겠지
@@ -10,7 +11,8 @@ function App() {
 
   return (
     <>
-      <Register />
+      {/* <Register /> */}
+      <HookExam />
     </>
   );
 }
