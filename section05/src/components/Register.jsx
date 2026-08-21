@@ -14,41 +14,36 @@ const Register = () => {
     bio: "",
   });
 
+  const onChange = (e) => {
+    console.log(e.target.name, e.target.value);
+    // 새로운 객체 만들면서 프로퍼티의 키 자리에 대괄호 넣고 변수 넣으면 그 변수 값을 변경하겠다
+    // ["name" : "박상지"]
+    setInput({ ...input, [e.target.name]: e.target.value });
+  };
   // console.log(input);
 
-  // default 속성 지정할 거면 input에 value={name} 반드시 지정해줘야함
-  const onChangeName = (e) => {
-    // 유의!!!!  ...input 없으면 name만 남고 나머지 키 다 날아감
-    setInput({ ...input, name: e.target.value });
-  };
-
-  const onChangeBirth = (e) => {
-    setInput({ ...input, birth: e.target.value });
-  };
-
-  const onChangeCountry = (e) => {
-    setInput({ ...input, country: e.target.value });
-  };
-
-  const onChangeBio = (e) => {
-    setInput({ ...input, bio: e.target.value });
-  };
   return (
     <div>
       <div>
         <input
+          name="name"
           value={input.name}
-          onChange={onChangeName}
+          onChange={onChange}
           placeholder={"이름"}
         />
         {/* {name} */}
       </div>
       <div>
-        <input value={input.birth} type="date" onChange={onChangeBirth} />
+        <input
+          name="birth"
+          value={input.birth}
+          type="date"
+          onChange={onChange}
+        />
         {input.birth}
       </div>
       <div>
-        <select value={input.country} onChange={onChangeCountry}>
+        <select name="country" value={input.country} onChange={onChange}>
           <option value=""></option>
           <option value="kr">한국</option>
           <option value="us">미국</option>
@@ -57,7 +52,7 @@ const Register = () => {
         {input.country}
       </div>
       <div>
-        <textarea value={input.bio} onChange={onChangeBio} />
+        <textarea name="bio" value={input.bio} onChange={onChange} />
         {input.bio}
       </div>
     </div>
