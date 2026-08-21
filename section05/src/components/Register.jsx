@@ -7,50 +7,58 @@ import { useState } from "react";
 // 4. 자기소개
 
 const Register = () => {
-  // default 속성 지정할 거면 input에 value={name} 반드시 지정해줘야함
-  const [name, setName] = useState("이름");
-  const [birth, setBirth] = useState("");
-  const [country, setCountry] = useState("");
-  const [bio, setBio] = useState("");
+  const [input, setInput] = useState({
+    name: "",
+    birth: "",
+    country: "",
+    bio: "",
+  });
 
+  // console.log(input);
+
+  // default 속성 지정할 거면 input에 value={name} 반드시 지정해줘야함
   const onChangeName = (e) => {
-    setName(e.target.value);
+    // 유의!!!!  ...input 없으면 name만 남고 나머지 키 다 날아감
+    setInput({ ...input, name: e.target.value });
   };
 
   const onChangeBirth = (e) => {
-    setBirth(e.target.value);
+    setInput({ ...input, birth: e.target.value });
   };
 
   const onChangeCountry = (e) => {
-    setCountry(e.target.value);
+    setInput({ ...input, country: e.target.value });
   };
 
   const onChangeBio = (e) => {
-    setBio(e.target.value);
+    setInput({ ...input, bio: e.target.value });
   };
-  //   console.log(name);
   return (
     <div>
       <div>
-        <input value={name} onChange={onChangeName} placeholder={"이름"} />
+        <input
+          value={input.name}
+          onChange={onChangeName}
+          placeholder={"이름"}
+        />
         {/* {name} */}
       </div>
       <div>
-        <input value={birth} type="date" onChange={onChangeBirth} />
-        {birth}
+        <input value={input.birth} type="date" onChange={onChangeBirth} />
+        {input.birth}
       </div>
       <div>
-        <select value={country} onChange={onChangeCountry}>
+        <select value={input.country} onChange={onChangeCountry}>
           <option value=""></option>
           <option value="kr">한국</option>
           <option value="us">미국</option>
           <option value="uk">영국</option>
         </select>
-        {country}
+        {input.country}
       </div>
       <div>
-        <textarea value={bio} onChange={onChangeBio} />
-        {bio}
+        <textarea value={input.bio} onChange={onChangeBio} />
+        {input.bio}
       </div>
     </div>
   );
